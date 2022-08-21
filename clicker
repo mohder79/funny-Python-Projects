@@ -1,0 +1,19 @@
+import time
+import schedule
+from pynput.mouse import Controller, Button
+
+
+start_time = str(input('start time'))
+
+mouse = Controller()
+
+
+def clicker():
+    mouse.click(Button.left, 1)
+
+
+schedule.every().day.at(start_time).do(clicker)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
