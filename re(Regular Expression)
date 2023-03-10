@@ -1,0 +1,33 @@
+
+text = '🔥 #ATOM/USDT (Long📈, x20) 🔥 \n **Entry** - 13.06200 \n **SL** - 5-7% \n **Take-Profit:\n **🥇 13.32324 (40% of profit) \n 🥈 13.45386 (60% of profit)   \n 🥉 13.58448 (80% of profit)   \n 🚀 13.7151 (100% of profit)  '
+
+print(text)
+
+def signal(trxt=text):
+    symbol = (re.findall(r'\w+/\w+', text)[0])
+    print('symbol :',  symbol)
+    direction = 'long' if (re.search(r'Long', text)) else 'short'
+    print('direction :', direction)
+    leverage = re.search(r'x\d+', text).group()
+    print('leverage: ', leverage)
+    prices = re.findall(r'\d+\.\d+', text)
+    entry = prices[0]
+    print('entry:', entry)
+    tp1 = prices[1]
+    print('tp1', tp1)
+    tp2 = prices[2]
+    print('tp2', tp2)
+    tp3 = prices[3]
+    print('tp3', tp3)
+    tp4 = prices[4]
+    print('tp4', tp4)
+
+    return symbol, direction, leverage, entry, tp1, tp2, tp3, tp4
+
+
+signal()
+
+
+# item = signal()[1]
+
+# print(item)
