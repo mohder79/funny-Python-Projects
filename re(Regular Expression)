@@ -1,6 +1,5 @@
 
-text = '🔥 #ATOM/USDT (Long📈, x20) 🔥 \n **Entry** - 13.06200 \n **SL** - 5-7% \n **Take-Profit:\n **🥇 13.32324 (40% of profit) \n 🥈 13.45386 (60% of profit)   \n 🥉 13.58448 (80% of profit)   \n 🚀 13.7151 (100% of profit)  '
-
+text = '=='
 print(text)
 
 def signal(trxt=text):
